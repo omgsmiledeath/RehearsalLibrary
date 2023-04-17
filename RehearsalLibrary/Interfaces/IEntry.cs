@@ -1,4 +1,6 @@
 ﻿using System;
+using RehearsalLibrary.Enums;
+
 namespace RehearsalLibrary.Interfaces
 {
 	public interface IEntry
@@ -7,7 +9,8 @@ namespace RehearsalLibrary.Interfaces
 		int RehearsalHourCount { get; set; }
 		DateTime EntryStart { get; set; }
 		DateTime EntryEnd { get; set; }
-		string Entry { get; set; }
+		RehearsalEntryType EntryType { get; set; }
+		IRehearsalClient Client { get; set; }
 	}
 }
 
