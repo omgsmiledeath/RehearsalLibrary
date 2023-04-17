@@ -1,11 +1,10 @@
 ﻿using System;
-namespace RehearsalLibrary.Entities
+using RehearsalLibrary.Interfaces;
+
+namespace RehearsalLibrary.Entities;
+
+public class StudioGuest:IRehearsalClient
 {
-	public class StudioGuest
-	{
-		public StudioGuest()
-		{
-		}
-	}
+
 }
 

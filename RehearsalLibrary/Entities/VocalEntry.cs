@@ -1,11 +1,8 @@
 ﻿using System;
-namespace RehearsalLibrary.Entities
+namespace RehearsalLibrary.Entities;
+
+public class VocalEntry
 {
-	public class VocalStudent
-	{
-		public VocalStudent()
-		{
-		}
-	}
+
 }
 

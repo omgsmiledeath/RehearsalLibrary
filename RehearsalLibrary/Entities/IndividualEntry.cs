@@ -1,11 +1,7 @@
 ﻿using System;
-namespace RehearsalLibrary.Entities
+namespace RehearsalLibrary.Entities;
+
+public class IndividualEntry
 {
-	public class Individual
-	{
-		public Individual()
-		{
-		}
-	}
 }
 

@@ -1,11 +1,13 @@
 ﻿using System;
-namespace RehearsalLibrary.Entities
+using RehearsalLibrary.Interfaces;
+
+namespace RehearsalLibrary.Entities;
+
+public class Comment : IComment
 {
-	public class Comment
-	{
-		public Comment()
-		{
-		}
-	}
+    public int Id { get; set; }
+    public string Message { get; set; }
+    public IRehearsalClient StudioClient { get; set; }
+    
 }
 

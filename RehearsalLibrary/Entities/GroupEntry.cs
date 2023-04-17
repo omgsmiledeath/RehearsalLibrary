@@ -1,11 +1,8 @@
 ﻿using System;
-namespace RehearsalLibrary.Entities
+namespace RehearsalLibrary.Entities;
+
+public class GroupEntry
 {
-	public class Group
-	{
-		public Group()
-		{
-		}
-	}
+
 }
 
