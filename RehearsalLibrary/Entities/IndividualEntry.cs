@@ -1,7 +1,19 @@
-﻿using System;
+﻿using RehearsalLibrary.Enums;
+using RehearsalLibrary.Interfaces;
+using System;
 namespace RehearsalLibrary.Entities;
 
-public class IndividualEntry
+public class IndividualEntry : IEntry
 {
+    public int Id { get; set; }
+    public int RehearsalHourCount { get; set; }
+    public DateTime EntryStart { get; set; }
+    public DateTime EntryEnd { get; set; }
+    public RehearsalEntryType EntryType { get; set; }
+    public IRehearsalClient Client { get; set; }
+    public string AdditionMessage { get; set; }
+    public RehearsalEntryStatus EntryStatus { get; set; }
+    bool CymbalsRent { get; set; }
+
 }
 

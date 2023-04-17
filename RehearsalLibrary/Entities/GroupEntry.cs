@@ -12,5 +12,7 @@ public class GroupEntry : IEntry
     public RehearsalEntryType EntryType { get; set; }
     public IRehearsalClient Client { get; set; }
     public string? AdditionMessage { get; set; }
+    public RehearsalEntryStatus EntryStatus { get; set; }
+    bool CymbalsRent { get; set; }
 }
 

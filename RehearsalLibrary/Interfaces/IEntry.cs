@@ -12,6 +12,7 @@ namespace RehearsalLibrary.Interfaces
 		RehearsalEntryType EntryType { get; set; }
 		IRehearsalClient Client { get; set; }
 		string AdditionMessage { get; set; }
-	}
+        RehearsalEntryStatus EntryStatus { get; set; }
+    }
 }
 
