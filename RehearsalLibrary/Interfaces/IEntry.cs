@@ -11,6 +11,7 @@ namespace RehearsalLibrary.Interfaces
 		DateTime EntryEnd { get; set; }
 		RehearsalEntryType EntryType { get; set; }
 		IRehearsalClient Client { get; set; }
+		string AdditionMessage { get; set; }
 	}
 }
 

@@ -8,7 +8,6 @@ namespace RehearsalLibrary.Interfaces;
     int Id { get; set; }
     string Name { get; set; }
     string Email { get; set; }
-    bool CheckPassword(string password);
     StudioUserTypes UserType { get; set; }
     DateTime RegistrationDate { get; set; }
     }
