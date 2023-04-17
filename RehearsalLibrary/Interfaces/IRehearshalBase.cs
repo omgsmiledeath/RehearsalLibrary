@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace RehearsalLibrary.Interfaces
 {
-    internal interface IRehearshalBase
+    public interface IRehearshalBase
     {
+        IEnumerable<IEntry> GetAllEntries();
+        IEnumerable<IRehearsalClient> GetAllClient();
+        void AddNewEntry(IEntry entry);
+        void AddNewClient(IRehearsalClient client);
+
     }
 }

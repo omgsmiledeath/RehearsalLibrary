@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace RehearsalLibrary.Enums
 {
-    internal class RehearsalEntryStatus
+    public enum RehearsalEntryStatus
     {
+        Request = 0,
+        Approved = 1,
+        Started = 2,
+        Ended =3,
+        Abondon = 4
     }
 }
