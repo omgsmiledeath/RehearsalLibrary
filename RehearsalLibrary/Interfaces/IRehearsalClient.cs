@@ -10,7 +10,7 @@ public interface IRehearsalClient
     ICollection<GroupEntry> GroupEntries { get; set; }
     ICollection<IndividualEntry> IndividualEntries { get; set; }
     ICollection<VocalEntry> VocalEntries { get; set; }
-    ICollection<IComment> Comments { get; set; }
+    ICollection<Comment> Comments { get; set; }
     
 }
 

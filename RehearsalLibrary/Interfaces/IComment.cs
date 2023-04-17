@@ -1,10 +1,11 @@
-﻿using System;
+﻿using RehearsalLibrary.Entities;
+using System;
 namespace RehearsalLibrary.Interfaces;
 
 public interface IComment
 {
     int Id { get; set; }
     string Message { get; set; }
-    IRehearsalClient StudioClient { get; set; }
+    Client StudioClient { get; set; }
 }
 

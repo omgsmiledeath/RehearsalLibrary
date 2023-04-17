@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1704.5
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RehearsalLibrary", "RehearsalLibrary\RehearsalLibrary.csproj", "{5CE40F9C-AE5B-49BA-83D4-1021751E1A9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RehearsalLibrary", "RehearsalLibrary\RehearsalLibrary.csproj", "{5CE40F9C-AE5B-49BA-83D4-1021751E1A9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDb", "TestDb\TestDb.csproj", "{24611EBB-8471-4FD7-B0E0-86AE90671EF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5CE40F9C-AE5B-49BA-83D4-1021751E1A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CE40F9C-AE5B-49BA-83D4-1021751E1A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CE40F9C-AE5B-49BA-83D4-1021751E1A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24611EBB-8471-4FD7-B0E0-86AE90671EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24611EBB-8471-4FD7-B0E0-86AE90671EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24611EBB-8471-4FD7-B0E0-86AE90671EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24611EBB-8471-4FD7-B0E0-86AE90671EF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

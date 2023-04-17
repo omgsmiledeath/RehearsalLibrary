@@ -1,4 +1,5 @@
 ﻿using System;
+using RehearsalLibrary.Entities;
 using RehearsalLibrary.Enums;
 
 namespace RehearsalLibrary.Interfaces
@@ -10,7 +11,7 @@ namespace RehearsalLibrary.Interfaces
 		DateTime EntryStart { get; set; }
 		DateTime EntryEnd { get; set; }
 		RehearsalEntryType EntryType { get; set; }
-		IRehearsalClient Client { get; set; }
+		Client Client { get; set; }
 		string AdditionMessage { get; set; }
         RehearsalEntryStatus EntryStatus { get; set; }
     }

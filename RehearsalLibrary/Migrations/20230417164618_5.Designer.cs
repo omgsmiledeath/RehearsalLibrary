@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RehearsalLibrary.Base;
 
@@ -11,9 +12,11 @@ using RehearsalLibrary.Base;
 namespace RehearsalLibrary.Migrations
 {
     [DbContext(typeof(RehearshalSqlBase))]
-    partial class RehearshalSqlBaseModelSnapshot : ModelSnapshot
+    [Migration("20230417164618_5")]
+    partial class _5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
