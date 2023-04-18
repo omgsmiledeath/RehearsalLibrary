@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RehearsalLibrary.Entities
 {
-    public class Client : IRehearsalClient
+    public abstract class Client : IRehearsalClient
     {
         public int Id { get; set; }
         public string Name { get; set; }

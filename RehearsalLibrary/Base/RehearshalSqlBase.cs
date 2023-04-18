@@ -12,23 +12,24 @@ namespace RehearsalLibrary.Base
 {
     public class RehearshalSqlBase : DbContext, IRehearshalBase
     {
-        private SqlConnectionStringBuilder _sqlConStrBuilder;
+
         public DbSet<IndividualEntry> IndividualEntries { get; set; }
         public DbSet<GroupEntry> GroupEntries { get; set; }
         public DbSet<VocalEntry> VocalEntries { get; set; }
         public DbSet<StudioClient> StudioClients { get; set; }
-        public DbSet<StudioGuest> StudioGuests { get; set; }
+
         //public RehearshalSqlBase(SqlConnectionStringBuilder sqlConStrBuilder)
         //{
         //    _sqlConStrBuilder = sqlConStrBuilder;
         //}
         public RehearshalSqlBase()
         {
-    
+            
+            Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer((@"Server=(localdb)\mssqllocaldb;Database=RehearsalDb;Trusted_Connection=True;"));
+            optionsBuilder.UseSqlite("Data Source =F:\\C#\\My\\RehearsalLibrary\\RehearsalLibrary\\base.db");
         }
 
         public void AddNewClient(IRehearsalClient client)
