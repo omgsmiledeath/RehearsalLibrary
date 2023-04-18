@@ -11,8 +11,8 @@ using RehearsalLibrary.Base;
 namespace RehearsalLibrary.Migrations
 {
     [DbContext(typeof(RehearshalSqlBase))]
-    [Migration("20230418020533_newStructure")]
-    partial class newStructure
+    [Migration("20230418025023_init1")]
+    partial class init1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,7 +40,7 @@ namespace RehearsalLibrary.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Client");
+                    b.ToTable("Clients");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("Client");
 

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RehearsalLibrary.Base;
 
@@ -10,9 +11,11 @@ using RehearsalLibrary.Base;
 namespace RehearsalLibrary.Migrations
 {
     [DbContext(typeof(RehearshalSqlBase))]
-    partial class RehearshalSqlBaseModelSnapshot : ModelSnapshot
+    [Migration("20230418030426_init3")]
+    partial class init3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.5");

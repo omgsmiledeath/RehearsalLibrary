@@ -16,6 +16,7 @@ namespace RehearsalLibrary.Base
         public DbSet<IndividualEntry> IndividualEntries { get; set; }
         public DbSet<GroupEntry> GroupEntries { get; set; }
         public DbSet<VocalEntry> VocalEntries { get; set; }
+        public DbSet<Client> Clients { get; set; }
         public DbSet<StudioClient> StudioClients { get; set; }
 
         //public RehearshalSqlBase(SqlConnectionStringBuilder sqlConStrBuilder)
@@ -30,6 +31,22 @@ namespace RehearsalLibrary.Base
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source =F:\\C#\\My\\RehearsalLibrary\\RehearsalLibrary\\base.db");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Client>()
+                .HasMany<IndividualEntry>(c => c.IndividualEntries)
+                .WithOne(i => i.Client)
+                .HasForeignKey(i => i.ClientId);
+            modelBuilder.Entity<Client>()
+                .HasMany<VocalEntry>(c => c.VocalEntries)
+                .WithOne(i => i.Client)
+                .HasForeignKey(i => i.ClientId);
+            modelBuilder.Entity<Client>()
+                .HasMany<GroupEntry>(c => c.GroupEntries)
+                .WithOne(i => i.Client)
+                .HasForeignKey(i => i.ClientId);
         }
 
         public void AddNewClient(IRehearsalClient client)

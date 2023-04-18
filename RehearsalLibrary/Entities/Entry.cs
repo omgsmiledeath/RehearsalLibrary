@@ -15,6 +15,7 @@ namespace RehearsalLibrary.Entities
         public DateTime EntryStart { get; set; }
         public DateTime EntryEnd { get; set; }
         public RehearsalEntryType EntryType { get; set; }
+        public int ClientId { get; set; }
         public Client Client { get; set; }
         public string AdditionMessage { get; set; }
         public RehearsalEntryStatus EntryStatus { get; set; }
