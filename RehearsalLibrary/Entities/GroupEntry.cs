@@ -5,6 +5,6 @@ namespace RehearsalLibrary.Entities;
 
 public class GroupEntry : Entry
 {
-    bool CymbalsRent { get; set; }
+    public bool CymbalsRent { get; set; }
 }
 

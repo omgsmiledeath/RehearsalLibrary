@@ -18,6 +18,7 @@ namespace RehearsalLibrary.Base
         public DbSet<VocalEntry> VocalEntries { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<StudioClient> StudioClients { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         //public RehearshalSqlBase(SqlConnectionStringBuilder sqlConStrBuilder)
         //{
@@ -26,7 +27,7 @@ namespace RehearsalLibrary.Base
         public RehearshalSqlBase()
         {
             
-            Database.EnsureCreated();
+           // Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -47,6 +48,9 @@ namespace RehearsalLibrary.Base
                 .HasMany<GroupEntry>(c => c.GroupEntries)
                 .WithOne(i => i.Client)
                 .HasForeignKey(i => i.ClientId);
+
+
+
         }
 
         public void AddNewClient(IRehearsalClient client)

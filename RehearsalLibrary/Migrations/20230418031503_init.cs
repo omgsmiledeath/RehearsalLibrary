@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace RehearsalLibrary.Migrations
 {
     /// <inheritdoc />
-    public partial class init1 : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -35,14 +35,14 @@ namespace RehearsalLibrary.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Message = table.Column<string>(type: "TEXT", nullable: false),
-                    StudioClientId = table.Column<int>(type: "INTEGER", nullable: false)
+                    ClientId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Comment", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Comment_Clients_StudioClientId",
-                        column: x => x.StudioClientId,
+                        name: "FK_Comment_Clients_ClientId",
+                        column: x => x.ClientId,
                         principalTable: "Clients",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -124,9 +124,9 @@ namespace RehearsalLibrary.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comment_StudioClientId",
+                name: "IX_Comment_ClientId",
                 table: "Comment",
-                column: "StudioClientId");
+                column: "ClientId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_GroupEntries_ClientId",

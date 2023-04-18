@@ -11,8 +11,8 @@ using RehearsalLibrary.Base;
 namespace RehearsalLibrary.Migrations
 {
     [DbContext(typeof(RehearshalSqlBase))]
-    [Migration("20230418030426_init3")]
-    partial class init3
+    [Migration("20230418031624_init2")]
+    partial class init2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,18 +53,18 @@ namespace RehearsalLibrary.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("ClientId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Message")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("StudioClientId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("StudioClientId");
+                    b.HasIndex("ClientId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("RehearsalLibrary.Entities.GroupEntry", b =>
@@ -188,13 +188,13 @@ namespace RehearsalLibrary.Migrations
 
             modelBuilder.Entity("RehearsalLibrary.Entities.Comment", b =>
                 {
-                    b.HasOne("RehearsalLibrary.Entities.Client", "StudioClient")
+                    b.HasOne("RehearsalLibrary.Entities.Client", "Client")
                         .WithMany("Comments")
-                        .HasForeignKey("StudioClientId")
+                        .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("StudioClient");
+                    b.Navigation("Client");
                 });
 
             modelBuilder.Entity("RehearsalLibrary.Entities.GroupEntry", b =>

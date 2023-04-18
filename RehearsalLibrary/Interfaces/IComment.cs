@@ -6,6 +6,6 @@ public interface IComment
 {
     int Id { get; set; }
     string Message { get; set; }
-    Client StudioClient { get; set; }
+    Client Client { get; set; }
 }
 

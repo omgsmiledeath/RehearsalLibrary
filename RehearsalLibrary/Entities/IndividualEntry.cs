@@ -5,7 +5,7 @@ namespace RehearsalLibrary.Entities;
 
 public class IndividualEntry : Entry
 {
-    bool CymbalsRent { get; set; }
+    public bool CymbalsRent { get; set; }
 
 }
 
