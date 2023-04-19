@@ -17,6 +17,9 @@ namespace RehearsalLibrary.Entities
         public virtual ICollection<IndividualEntry> IndividualEntries { get; set; }
         public virtual ICollection<VocalEntry> VocalEntries { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
+        public Client()
+        {
 
+        }
     }
 }

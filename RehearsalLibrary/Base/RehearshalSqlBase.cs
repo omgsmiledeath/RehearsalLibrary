@@ -31,7 +31,8 @@ namespace RehearsalLibrary.Base
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source =F:\\C#\\My\\RehearsalLibrary\\RehearsalLibrary\\base.db");
+            //optionsBuilder.UseSqlite("Data Source =F:\\C#\\My\\RehearsalLibrary\\RehearsalLibrary\\base.db");
+            optionsBuilder.UseSqlite("Data Source =/Users/kseniabelaevskaa/Projects/RehearsalLibrary/RehearsalLibrary/base.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
