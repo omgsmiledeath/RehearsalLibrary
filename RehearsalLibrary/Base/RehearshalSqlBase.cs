@@ -40,15 +40,18 @@ namespace RehearsalLibrary.Base
             modelBuilder.Entity<Client>()
                 .HasMany<IndividualEntry>(c => c.IndividualEntries)
                 .WithOne(i => i.Client)
-                .HasForeignKey(i => i.ClientId);
+                .HasForeignKey(i => i.ClientId)
+                .OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<Client>()
                 .HasMany<VocalEntry>(c => c.VocalEntries)
                 .WithOne(i => i.Client)
-                .HasForeignKey(i => i.ClientId);
+                .HasForeignKey(i => i.ClientId)
+                .OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<Client>()
                 .HasMany<GroupEntry>(c => c.GroupEntries)
                 .WithOne(i => i.Client)
-                .HasForeignKey(i => i.ClientId);
+                .HasForeignKey(i => i.ClientId)
+                .OnDelete(DeleteBehavior.NoAction);
 
 
 

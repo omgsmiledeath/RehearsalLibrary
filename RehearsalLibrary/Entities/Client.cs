@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RehearsalLibrary.Entities
 {
-    public abstract class Client : IRehearsalClient
+    public class Client : IRehearsalClient
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -17,6 +17,8 @@ namespace RehearsalLibrary.Entities
         public virtual ICollection<IndividualEntry> IndividualEntries { get; set; }
         public virtual ICollection<VocalEntry> VocalEntries { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
+        public string Email { get; set; }
+        public DateTime RegistrationDate { get; set; }
         public Client()
         {
 
