@@ -23,5 +23,16 @@ namespace RehearsalLibrary.Entities
         {
 
         }
+        public Client(ClientProperties properties)
+        {
+            Name = properties.Name;
+            PhoneNumber = properties.Phone;
+            Email = properties.Email;
+            GroupEntries = new List<GroupEntry>();
+            IndividualEntries = new List<IndividualEntry>();
+            VocalEntries = new List<VocalEntry>(); 
+            Comments = new List<Comment>();
+            RegistrationDate = DateTime.Now;
+        }
     }
 }

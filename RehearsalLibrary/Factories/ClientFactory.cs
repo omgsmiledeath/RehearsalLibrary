@@ -6,10 +6,15 @@ namespace RehearsalLibrary.Factories
 {
 	public class ClientFactory:IClientFactory
 	{
-        public Client CreateClient(string name, string phone, string email)
+        private ClientProperties _properties;
+
+        public ClientFactory(ClientProperties properties)
         {
-            return new Client();
+            _properties = properties;
         }
+        public Client CreateClient()
+        {
+            return new Client(_properties);
     }
 }
 

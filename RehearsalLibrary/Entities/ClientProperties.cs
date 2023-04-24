@@ -1,11 +1,7 @@
 ﻿using System;
 namespace RehearsalLibrary.Entities
 {
-	public class ClientProperties
-	{
-		public ClientProperties()
-		{
-		}
-	}
+	public record ClientProperties(string Name,string Email,string Phone);
+
 }
 

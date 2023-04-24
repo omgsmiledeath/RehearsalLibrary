@@ -5,7 +5,7 @@ namespace RehearsalLibrary.Interfaces
 {
 	public interface IClientFactory
 	{
-		Client CreateClient(string name,string phone,string email);
+		Client CreateClient();
 	}
 }
 
