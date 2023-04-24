@@ -19,6 +19,7 @@ namespace RehearsalLibrary.Entities
         public virtual ICollection<Comment> Comments { get; set; }
         public string Email { get; set; }
         public DateTime RegistrationDate { get; set; }
+        public StudioUserTypes StudioUserType { get; set; }
         public Client()
         {
             GroupEntries = new List<GroupEntry>();
@@ -28,6 +29,7 @@ namespace RehearsalLibrary.Entities
             Name = "Unknown";
             PhoneNumber = "Unknown";
             Email = "Unknown";
+            StudioUserType = StudioUserTypes.Guest;
         }
         public Client(ClientProperties properties)
         {
@@ -39,6 +41,7 @@ namespace RehearsalLibrary.Entities
             VocalEntries = new List<VocalEntry>(); 
             Comments = new List<Comment>();
             RegistrationDate = DateTime.Now;
+            StudioUserType = StudioUserTypes.Guest;
         }
     }
 }
