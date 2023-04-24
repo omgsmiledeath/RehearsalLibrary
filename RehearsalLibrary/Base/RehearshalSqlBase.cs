@@ -17,7 +17,6 @@ namespace RehearsalLibrary.Base
         public DbSet<GroupEntry> GroupEntries { get; set; }
         public DbSet<VocalEntry> VocalEntries { get; set; }
         public DbSet<Client> Clients { get; set; }
-        public DbSet<StudioClient> StudioClients { get; set; }
         public DbSet<Comment> Comments { get; set; }
 
         //public RehearshalSqlBase(SqlConnectionStringBuilder sqlConStrBuilder)
@@ -31,8 +30,8 @@ namespace RehearsalLibrary.Base
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlite("Data Source =F:\\C#\\My\\RehearsalLibrary\\RehearsalLibrary\\base.db");
-            optionsBuilder.UseSqlite("Data Source =/Users/kseniabelaevskaa/Projects/RehearsalLibrary/RehearsalLibrary/base.db");
+            optionsBuilder.UseSqlite("Data Source =F:\\C#\\My\\RehearsalLibrary\\RehearsalLibrary\\base.db");
+            //optionsBuilder.UseSqlite("Data Source =/Users/kseniabelaevskaa/Projects/RehearsalLibrary/RehearsalLibrary/base.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -49,6 +48,11 @@ namespace RehearsalLibrary.Base
                 .OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<Client>()
                 .HasMany<GroupEntry>(c => c.GroupEntries)
+                .WithOne(i => i.Client)
+                .HasForeignKey(i => i.ClientId)
+                .OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<Client>()
+                .HasMany<Comment>(c => c.Comments)
                 .WithOne(i => i.Client)
                 .HasForeignKey(i => i.ClientId)
                 .OnDelete(DeleteBehavior.NoAction);
