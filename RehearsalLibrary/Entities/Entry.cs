@@ -24,8 +24,10 @@ namespace RehearsalLibrary.Entities
         {
             
         }
+        private EntryProperties _properties;
         public Entry(EntryProperties properties)
         {
+            _properties = properties;
             RehearsalHourCount = properties.RehearsalHourCount;
             EntryStart = properties.StartDateTime;
             EntryEnd = EntryStart.AddHours(RehearsalHourCount);
@@ -33,6 +35,13 @@ namespace RehearsalLibrary.Entities
             Client = properties.CurrentClient;
             ClientId = Client.Id;
             AdditionMessage = properties.AdditionMessage;
+
+            EntryStatus = RehearsalEntryStatus.Request;
         }
+
+        //protected virtual int CostCalc()
+        //{
+            
+        //}
     }
 }
