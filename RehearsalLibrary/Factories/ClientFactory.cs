@@ -4,8 +4,8 @@ using RehearsalLibrary.Interfaces;
 
 namespace RehearsalLibrary.Factories
 {
-	public class ClientFactory:IClientFactory
-	{
+    public class ClientFactory : IClientFactory
+    {
         private ClientProperties _properties;
 
         public ClientFactory(ClientProperties properties)
@@ -15,6 +15,7 @@ namespace RehearsalLibrary.Factories
         public Client CreateClient()
         {
             return new Client(_properties);
+        }
     }
 }
 
