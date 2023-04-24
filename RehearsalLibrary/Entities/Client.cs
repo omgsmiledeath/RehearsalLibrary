@@ -21,7 +21,13 @@ namespace RehearsalLibrary.Entities
         public DateTime RegistrationDate { get; set; }
         public Client()
         {
-
+            GroupEntries = new List<GroupEntry>();
+            IndividualEntries = new List<IndividualEntry>();
+            VocalEntries = new List<VocalEntry>();
+            Comments = new List<Comment>();
+            Name = "Unknown";
+            PhoneNumber = "Unknown";
+            Email = "Unknown";
         }
         public Client(ClientProperties properties)
         {

@@ -23,7 +23,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="Factories\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="base.db">

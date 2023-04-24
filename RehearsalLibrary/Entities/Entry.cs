@@ -19,5 +19,20 @@ namespace RehearsalLibrary.Entities
         public Client Client { get; set; }
         public string AdditionMessage { get; set; }
         public RehearsalEntryStatus EntryStatus { get; set; }
+        public int Cost { get; set; }
+        public Entry()
+        {
+            
+        }
+        public Entry(EntryProperties properties)
+        {
+            RehearsalHourCount = properties.RehearsalHourCount;
+            EntryStart = properties.StartDateTime;
+            EntryEnd = EntryStart.AddHours(RehearsalHourCount);
+            EntryType = properties.EntryType;
+            Client = properties.CurrentClient;
+            ClientId = Client.Id;
+            AdditionMessage = properties.AdditionMessage;
+        }
     }
 }
