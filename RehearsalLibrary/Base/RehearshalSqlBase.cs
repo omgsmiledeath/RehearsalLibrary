@@ -56,9 +56,6 @@ namespace RehearsalLibrary.Base
                 .WithOne(i => i.Client)
                 .HasForeignKey(i => i.ClientId)
                 .OnDelete(DeleteBehavior.NoAction);
-
-
-
         }
 
         public void AddNewClient(IRehearsalClient client)
